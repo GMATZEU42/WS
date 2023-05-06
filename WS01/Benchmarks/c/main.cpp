@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
 {
     if(argc > 1)
     {
-        unsigned int dim = std::atoi(argv[1]);  
+        unsigned int dim = std::atoi(argv[1]); 
         if(dim > 0)
         {
             // creation matrix
@@ -50,7 +50,6 @@ int main(int argc, char* argv[])
             auto end = std::chrono::steady_clock::now();
             auto tCreation = std::chrono::duration_cast<std::chrono::microseconds>(end-start).count() / 1000000.0;
             std::cout << "Time to create a matrix " << dim << "X" << dim << ": " << tCreation << std::endl;
-            // printSquareMatrix(matrix, dim);
             // calculate the square
             start = std::chrono::steady_clock::now();
             int** matrix_sq;
@@ -72,7 +71,15 @@ int main(int argc, char* argv[])
             end = std::chrono::steady_clock::now();
             auto tComputation = std::chrono::duration_cast<std::chrono::microseconds>(end-start).count() / 1000000.0;
             std::cout << "Time to compute the square of a matrix " << dim << "X" << dim << ": " << tComputation << std::endl;
-            // printSquareMatrix(matrix_sq, dim);
+            //
+            if (argc > 2)
+            {
+                auto tmp = argv[2];
+                if (std::string(argv[2]) == "-d")
+                {
+                    printSquareMatrix(matrix_sq, dim);
+                }
+            }
             // free memory
             for (size_t i = 0U; i < dim; ++i)
             {

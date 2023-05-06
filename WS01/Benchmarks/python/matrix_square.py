@@ -33,6 +33,10 @@ if(len(sys.argv) > 1):
         end = time.time()
         tCalculation = end - start
         print("Time to compute the square of a matrix {}X{} : {} ".format(dim, dim, tCalculation))
+        # debug print
+        if(len(sys.argv) > 2):
+            if(sys.argv[2] == "-d"):
+                print(matrix_sq)
         # save results
         fileName = os.getcwd() + os.sep + 'benchmark_results.csv'
         f = open(fileName, 'a', newline='') # append mode, if file doesn't exist it will be created

@@ -46,8 +46,11 @@ cBased = [cTuple, cppTuple, blitzTuple]
 pyBased = [pyTuple, npTuple]
 noLibs = [cTuple, cppTuple, pyTuple]
 withLibs = [blitzTuple, npTuple]
+all = [cTuple, cppTuple, blitzTuple, pyTuple, npTuple]
+
 # test
-testLanguages = [blitzTuple]
+#testLanguages = [blitzTuple]
+testLanguages = withLibs
 
 # Plots
 printTotals = True
@@ -67,7 +70,7 @@ def make_test(start, end):
 
 make_test(10, 100)
 make_test(100, 1000)
-make_test(1000, 10000)
+#make_test(1000, 10000)
 
 # plot results
 languages = list()
@@ -100,7 +103,7 @@ for test in testLanguages:
     plt.plot(dimension, computation, label='computation')
     plt.title(language + ' time')
     plt.xlabel('dim')
-    plt.ylabel('time')
+    plt.ylabel('time (s)')
     plt.legend()
     plt.grid()
     plt.show()
@@ -111,7 +114,7 @@ if(printCreations):
         plt.plot(dimensions[i], creations[i], label=languages[i])
     plt.title('creation time')
     plt.xlabel('dim')
-    plt.ylabel('time')
+    plt.ylabel('time (s)')
     plt.legend()
     plt.grid()
     plt.show()
@@ -121,7 +124,7 @@ if(printComputations):
         plt.plot(dimensions[i], computations[i], label=languages[i])
     plt.title('computation time')
     plt.xlabel('dim')
-    plt.ylabel('time')
+    plt.ylabel('time (s)')
     plt.legend()
     plt.grid()
     plt.show()
@@ -131,7 +134,7 @@ if(printTotals):
         plt.plot(dimensions[i], totals[i], label=languages[i])
     plt.title('total time')
     plt.xlabel('dim')
-    plt.ylabel('time')
+    plt.ylabel('time (s)')
     plt.legend()
     plt.grid()
     plt.show()
