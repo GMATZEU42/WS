@@ -39,8 +39,9 @@ for path in pathList:
 cTuple = (cPath, cExecutable, 'c')
 cppTuple = (cppPath, cppExecutable, 'cpp')
 blitzTuple = (blitzPath, blitzExecutable, 'blitz') 
-pyTuple = (pyPath, npExecutable, 'py')
+pyTuple = (pyPath, pyExecutable, 'py')
 npTuple = (npPath, npExecutable, 'np')
+
 # set of tests
 cBased = [cTuple, cppTuple, blitzTuple]
 pyBased = [pyTuple, npTuple]
@@ -49,8 +50,7 @@ withLibs = [blitzTuple, npTuple]
 all = [cTuple, cppTuple, blitzTuple, pyTuple, npTuple]
 
 # test
-#testLanguages = [blitzTuple]
-testLanguages = withLibs
+testLanguages = [npTuple, cTuple, cppTuple, blitzTuple]
 
 # Plots
 printTotals = True

@@ -7,7 +7,6 @@ struct object
 
 int main()
 {
-
     object* obj = new object();
     // use the resource
     obj->value = 42;

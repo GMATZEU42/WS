@@ -40,7 +40,6 @@ int main(int argc, char* argv[])
             }
             auto end = std::chrono::steady_clock::now();
             auto tCreation = std::chrono::duration_cast<std::chrono::microseconds>(end-start).count() / 1000000.0;
-            std::cout << "Time to create a matrix " << dim << "X" << dim << ": " << tCreation << std::endl;
             // calculate the square
             start = std::chrono::steady_clock::now();
             blitz::Array<int, 2> matrix_sq(dim, dim);
@@ -50,7 +49,6 @@ int main(int argc, char* argv[])
             matrix_sq = sum(matrix(i, k) * matrix(k, j), k);
             end = std::chrono::steady_clock::now();
             auto tComputation = std::chrono::duration_cast<std::chrono::microseconds>(end-start).count() / 1000000.0;
-            std::cout << "Time to compute the square of a matrix " << dim << "X" << dim << ": " << tComputation << std::endl;
             // debug print 
             if (argc > 2)
             {

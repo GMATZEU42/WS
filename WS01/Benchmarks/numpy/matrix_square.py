@@ -16,13 +16,11 @@ if(len(sys.argv) > 1):
             matrix = np.concatenate((matrix, [np.arange(0,dim)]))
         end = time.time()
         tCreation = end - start
-        print("Time to create a matrix {}X{} : {} ".format(dim, dim, tCreation))
         # calculate the square
         start = time.time()
         matrix_sq = np.dot(matrix, matrix)
         end = time.time()
         tCalculation = end - start
-        print("Time to compute the square of a matrix {}X{} : {} ".format(dim, dim, tCalculation))
         # debug print
         if(len(sys.argv) > 2):
             if(sys.argv[2] == "-d"):

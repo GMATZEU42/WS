@@ -49,7 +49,6 @@ int main(int argc, char* argv[])
             }
             auto end = std::chrono::steady_clock::now();
             auto tCreation = std::chrono::duration_cast<std::chrono::microseconds>(end-start).count() / 1000000.0;
-            std::cout << "Time to create a matrix " << dim << "X" << dim << ": " << tCreation << std::endl;
             // calculate the square
             start = std::chrono::steady_clock::now();
             int** matrix_sq;
@@ -70,7 +69,6 @@ int main(int argc, char* argv[])
             }
             end = std::chrono::steady_clock::now();
             auto tComputation = std::chrono::duration_cast<std::chrono::microseconds>(end-start).count() / 1000000.0;
-            std::cout << "Time to compute the square of a matrix " << dim << "X" << dim << ": " << tComputation << std::endl;
             //
             if (argc > 2)
             {

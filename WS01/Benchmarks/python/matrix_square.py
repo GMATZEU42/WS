@@ -16,9 +16,7 @@ if(len(sys.argv) > 1):
                 vector.append(i);
             matrix.append(vector);
         end = time.time()
-        # print(matrix)
         tCreation = end - start
-        print("Time to create a matrix {}X{} : {} ".format(dim, dim, tCreation))
         # calculate the square
         start = time.time()
         matrix_sq = list(list())
@@ -32,7 +30,6 @@ if(len(sys.argv) > 1):
             matrix_sq.append(vector)
         end = time.time()
         tCalculation = end - start
-        print("Time to compute the square of a matrix {}X{} : {} ".format(dim, dim, tCalculation))
         # debug print
         if(len(sys.argv) > 2):
             if(sys.argv[2] == "-d"):
