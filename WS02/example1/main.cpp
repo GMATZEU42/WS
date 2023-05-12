@@ -1,12 +1,12 @@
 #include <iostream>
 
-#include "time.h"
+#include "timing.h"
 
 void foo()
 {
-    time::timer t = time::timer();
-    t.start();
-    t.stop();
+    timing::timer *t = new timing::timer(42U);
+    t->start();
+    delete t;
 }
 
 int main()
