@@ -1,4 +1,5 @@
 #include "student.h"
+#include "worker.h"
 
 #include <iostream>
 
@@ -38,6 +39,9 @@ int main()
 
     // free memory
     delete am;
+
+    people::Worker w = people::Worker("Jacopo", 19, "my company", people::Role::EMPLOYEE);
+    w.printInfo();
     
     return 0;
 }
