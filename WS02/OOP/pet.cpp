@@ -3,7 +3,7 @@
 
 namespace pet {
 	void Pet::printInfo() {
-		std::cout << m_name << ", " << m_age << " years old." << std::endl;
+		std::cout << m_name << ", " << m_age << " years old" << std::endl;
 	}
 
 	void Dog::printInfo() {

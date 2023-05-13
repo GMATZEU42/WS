@@ -38,6 +38,13 @@ int main()
 
     // free memory
     delete am;
+
+    people::Person p = people::Person("Jacopo", 19);
+    pet::Dog *myDog = new pet::Dog("doggy", 3, pet::DogType::HOUND);
+    p.addPet(myDog);
+    pet::Cat* myCat = new pet::Cat("catty", 2, pet::CatType::B);
+    p.addPet(myCat);
+    p.printPets();
     
     return 0;
 }

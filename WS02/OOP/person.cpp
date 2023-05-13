@@ -15,4 +15,14 @@ namespace people
 			std::cout << "I'm " << m_name << " and I'm unknown years old" << std::endl;
 		}
 	}
+
+	void Person::addPet(pet::Pet* pet) {
+		m_pets.push_back(pet);
+	}
+
+	void Person::printPets() {
+		for (auto pet : m_pets) {
+			pet->printInfo();
+		}
+	}
 }
