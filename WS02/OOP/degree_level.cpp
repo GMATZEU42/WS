@@ -43,7 +43,7 @@ namespace degree
 
 	Degree* DegreeFactory::createDegree(const DegreeLevel degreeLevel, const std::string name, unsigned int year, const std::string thesis, const unsigned int vote)
 	{
-		Degree *deg;
+		Degree* deg = nullptr;
 		switch (degreeLevel)
 		{
 		case DegreeLevel::PRIMARY:

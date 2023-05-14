@@ -19,7 +19,7 @@ namespace degree
     {
     public:
         Degree(const std::string name = "", const unsigned int year = 0U, DegreeLevel level = DegreeLevel::NONE) : m_name(name), m_year(year), m_level(level) {};
-        ~Degree() {};
+        virtual ~Degree() {};
         virtual void printDegree();
     private:
         std::string m_name = "";
@@ -42,7 +42,7 @@ namespace degree
         ~Phd() {};
         void printDegree() override;
     private:
-        std::string m_thesis;
+        std::string m_thesis = "";
         unsigned int m_vote = 0U;
     };
 
@@ -53,7 +53,7 @@ namespace degree
         ~Master() {};
         void printDegree() override;
     private:
-        std::string m_thesis;
+        std::string m_thesis = "";
         unsigned int m_vote = 0U;
     };
 
@@ -64,7 +64,7 @@ namespace degree
         ~SecondaryII() {};
         void printDegree() override;
     private:
-        std::string m_thesis;
+        std::string m_thesis = "";
         unsigned int m_vote = 0U;
     };
 

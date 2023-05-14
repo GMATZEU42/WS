@@ -7,12 +7,8 @@ namespace people
 {
     class Person
     {
-    public:
-        Person(std::string name, unsigned int age) : m_name(name), m_age(age) 
-        {
-            std::cout << "Hello I m" << m_name << std::endl;
-        };
-        ~Person() {};
+        Person(std::string name, unsigned int age) : m_name(name), m_age(age) {};
+        virtual ~Person() {};
         
         inline std::string getName() { return m_name; };
         inline unsigned int getAge() { return m_age; };
@@ -20,7 +16,7 @@ namespace people
         virtual void printInfo();
 
     private:
-        std::string m_name;
-        unsigned int m_age;
+        std::string m_name = "";
+        unsigned int m_age = 0U;
     };    
 }

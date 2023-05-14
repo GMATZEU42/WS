@@ -20,13 +20,13 @@ int main()
 
     //  
     auto dFactory = degree::DegreeFactory();
-    // case local
+    // case local: gm is a student so no cast is needed
     gm.addDegree(dFactory.createDegree(degree::DegreeLevel::PRIMARY, "Scuole Elementari San Domenico Savio", 2000U));
     gm.addDegree(dFactory.createDegree(degree::DegreeLevel::SECONDARY_I, "Scuole Medie San Domenico Savio", 2003U));
     gm.addDegree(dFactory.createDegree(degree::DegreeLevel::SECONDARY_II,  "I.T.C.G. Giovanni Maria Angioy", 2009U, "L'energia nucleare", 74U));
     gm.addDegree(dFactory.createDegree(degree::DegreeLevel::MASTER, "Matematica Unibo", 2018U, "Ricostruzione di mappe MRI da dati sottocampionati", 110U));
     gm.printInfo();
-    // case pointer
+    // case pointer: this require a cast at a student to obtain access to the addDegree method
     dynamic_cast<people::Student*>(am)->addDegree(dFactory.createDegree(degree::DegreeLevel::PRIMARY, "Scuole Elementari Angelo Battelli", 2000U));
     dynamic_cast<people::Student*>(am)->addDegree(dFactory.createDegree(degree::DegreeLevel::SECONDARY_I, "Scuole Medie Angelo Battelli", 2003U));
     dynamic_cast<people::Student*>(am)->addDegree(dFactory.createDegree(degree::DegreeLevel::SECONDARY_II, "Liceo Scientifico A.Einstein", 2009U, "La luce", 100U));

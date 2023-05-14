@@ -13,6 +13,9 @@ namespace people
 
 	void Student::addDegree(degree::Degree* deg)
 	{
-		m_degreeList.push_back(deg);
+		if (deg != nullptr)
+		{
+			m_degreeList.push_back(deg);
+		}
 	}
 }
