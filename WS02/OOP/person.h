@@ -8,7 +8,7 @@ namespace people
     {
     public:
         Person(std::string name, unsigned int age) : m_name(name), m_age(age) {};
-        ~Person() {};
+        virtual ~Person() {};
         
         inline std::string getName() { return m_name; };
         inline unsigned int getAge() { return m_age; };
@@ -16,7 +16,7 @@ namespace people
         virtual void printInfo();
 
     private:
-        std::string m_name;
-        unsigned int m_age;
+        std::string m_name = "";
+        unsigned int m_age = 0U;
     };    
 }
