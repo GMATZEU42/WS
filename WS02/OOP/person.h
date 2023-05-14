@@ -1,13 +1,17 @@
 #pragma once
 
 #include <string>
+#include <iostream>
 
 namespace people
 {
     class Person
     {
     public:
-        Person(std::string name, unsigned int age) : m_name(name), m_age(age) {};
+        Person(std::string name, unsigned int age) : m_name(name), m_age(age) 
+        {
+            std::cout << "Hello I m" << m_name << std::endl;
+        };
         ~Person() {};
         
         inline std::string getName() { return m_name; };
