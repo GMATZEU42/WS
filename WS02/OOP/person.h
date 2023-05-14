@@ -10,7 +10,7 @@ namespace people
     {
     public:
         Person(std::string name, unsigned int age) : m_name(name), m_age(age) {};
-        ~Person() {
+        virtual ~Person() {
             for (pet::Pet* pet : m_pets) {
                 delete pet;
             }

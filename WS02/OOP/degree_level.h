@@ -19,7 +19,7 @@ namespace degree
     {
     public:
         Degree(const std::string name = "", const unsigned int year = 0U, DegreeLevel level = DegreeLevel::NONE) : m_name(name), m_year(year), m_level(level) {};
-        ~Degree() {};
+        virtual ~Degree() {};
         virtual void printDegree();
     private:
         std::string m_name = "";
