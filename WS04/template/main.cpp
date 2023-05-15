@@ -10,20 +10,24 @@ void templatePrint(T value)
 }
 
 template <typename T>
-class object
+class Object
 {
 public:
-    object(T value) : m_pValue(value) {};
-    ~object() 
+    Object(T value)
+    {
+        static_assert(std::is_literal_type(T));
+        m_pValue = new T(value);
+    };
+    ~Object()
     {
         if (m_pValue)
         {
             delete m_pValue;
         }
     }
-    object operator+(const object& other)
+    Object operator+(const Object& other)
     {
-        retrun new object(*m_pValue + other.m_pValue);
+        return Object(*m_pValue + *other.m_pValue);
     }
 private:
     T* m_pValue = nullptr;
@@ -40,8 +44,13 @@ int main()
     // case double
     templatePrint(typeid(calc::sum(21.0, 21.0)).name());
 
-    // case string
-    templatePrint(calc::sum(std::string("Ciao"), std::string("Mamma")));
+    // case string: generate a static_assert compiler error
+    //templatePrint(calc::sum(std::string("Ciao"), std::string("Mamma"))); 
+
+    Object<int> iObj(42);
+    Object<double> dObj(42.0);
+
+    //auto sumObj = iObj + dObj;  // --> Compiler error
     
     // end of the program
     return 0;
