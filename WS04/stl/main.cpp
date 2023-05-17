@@ -1,6 +1,7 @@
 #include <iostream>
-#include <vector>
 #include <random>
+#include <vector>
+#include <map>
 #include <algorithm>
 
 template<typename T>
@@ -16,6 +17,9 @@ void fillVector(std::vector<T>& vec, unsigned int num_el)
 
 int main()
 {
+
+    std::cout << "#####################" << std::endl;
+    std::cout << "#### Vector case ####" << std::endl;
     std::vector<int> iVector;
     iVector.push_back(42);
 
@@ -34,6 +38,8 @@ int main()
     std::cout << std::endl; 
 
     // it is an iterator of type vector: std::vector<int>::iterator
+    // iVector.end() is an iterator that point to a position beyond 
+    // the end of the vector
     for (auto it = iVector.begin(); it != iVector.end(); ++it)
     {
         std::cout << *it << "\t"; 
@@ -46,6 +52,7 @@ int main()
     }
     std::cout << std::endl;
 
+    // Algorithm methods
     auto itMax = std::max_element(iVector.begin(), iVector.end());
     auto itMin = std::min_element(iVector.begin(), iVector.end());
     std::cout << "Max: " << *itMax << std::endl;
@@ -64,6 +71,43 @@ int main()
     }
     std::cout << std::endl;
 
+    //map
+    std::cout << "##################" << std::endl;
+    std::cout << "#### Map case ####" << std::endl;
+    std::map<int, std::string> mapCardinal{ {1, "Primo"}, {2, "Secondo"} };
+
+    // Add elements
+    mapCardinal[3] = "Terzo";
+    mapCardinal.insert(std::pair<int, std::string>(4, "Quarto"));
+
+    auto it5 = mapCardinal.find(5);
+    if (it5 != mapCardinal.end()) {
+        std::cout << mapCardinal.at(5) << " found!" << std::endl;
+    }
+    else {
+        std::cout << "Quinto not foud" << std::endl;
+    }
+    
+    auto it4 = mapCardinal.find(4);
+    if (it4 != mapCardinal.end())
+    {
+        std::cout << mapCardinal.at(4) << " found!" << std::endl;
+    }
+    else {
+        std::cout << "Quarto not foud" << std::endl;
+    }
+    
+    std::cout << "Map loop" << std::endl;
+    for (auto pair : mapCardinal)
+    {
+        std::cout << pair.first << "\t" << pair.second << std::endl;
+    }
+
+    std::cout << "Map iterator loop" << std::endl;
+    for (auto it = mapCardinal.begin(); it != mapCardinal.end(); ++it)
+    {
+        std::cout << it->first << "\t" << it->second << std::endl;
+    }
 
     
     // end of the program
