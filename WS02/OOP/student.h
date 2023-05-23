@@ -10,7 +10,7 @@ namespace people
     class Student : public Person
     {
     public:
-        Student(std::string name, unsigned int age, std::string alma_mater) :
+        Student(std::string name, unsigned int age, std::string alma_mater) : 
             Person(name, age), m_almaMater(alma_mater) {};
         ~Student()
         {
