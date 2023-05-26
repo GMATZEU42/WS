@@ -7,6 +7,7 @@ namespace people
 {
     class Person
     {
+    public:
         Person(std::string name, unsigned int age) : m_name(name), m_age(age) {};
         virtual ~Person() {};
         
