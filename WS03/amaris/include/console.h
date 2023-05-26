@@ -2,6 +2,7 @@
 
 #include "amaris.h"
 
+#include <iostream>
 #include <string>
 #include <mutex>
 #include <typeinfo>
