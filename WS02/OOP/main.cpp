@@ -1,4 +1,5 @@
 #include "student.h"
+#include "worker.h"
 
 #include <iostream>
 
@@ -15,7 +16,7 @@ int main()
     am->printInfo();
 
     //
-    people::Person x = people::Student("X", 33, "Y");
+    people::Worker x("Pippo", 69, "Amaris");
     x.printInfo();
 
     //  
@@ -35,8 +36,12 @@ int main()
     );
     am->printInfo();
     //
+    auto rFactory = role::RoleFactory();
 
+    x.addRole(rFactory.createRole(role::RoleLevel::INTERN, 2U, ));
+        
     // free memory
+    
     delete am;
     
     return 0;

@@ -7,38 +7,37 @@ namespace role
 	{	
 		std::cout << m_levelMap.at(m_level) << "\t"
 			<< m_name << "\t"
-			<< m_year << "\t"
-			<< m_check << "\t";
+			<< m_year << "\t";
 	}
 
 	void Intern::printRole()
 	{
 		Role::printRole();
-		std::cout << m_jobYears << std::endl;
+		std::cout << m_jobyears << std::endl;
 	}
 
 	void J_Developer::printRole()
 	{
 		Role::printRole();
-		std::cout << m_projects << std::endl;
+		std::cout << m_Project << std::endl;
 	}
 
 	void S_Developer::printRole()
 	{
 		Role::printRole();
-		std::cout << m_subordinates << std::endl;
+		std::cout << m_Subordinates << std::endl;
 	}
 
 	void Manager::printRole()
 	{
 		Role::printRole();
-		std::cout << m_team << std::endl;
+		std::cout << m_Team << std::endl;
 	}
 
 	void CEO::printRole()
 	{
 		Role::printRole();
-		std::cout << m_contract << std::endl;
+		std::cout << m_Contract << std::endl;
 	}
 
 	Role* RoleFactory::createRole(const RoleLevel roleLevel, const std::string name, const unsigned int year, const unsigned int jobYears, const unsigned int projects, const unsigned int subordinates, const unsigned int team, const unsigned int contract)

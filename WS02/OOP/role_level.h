@@ -51,7 +51,7 @@ namespace role
 	class J_Developer : public Role
 	{
 	public:
-		J_Developer(std::string name, unsigned int year, unsigned int projects) : Role(name, year, RoleLevel::J_DEVELOPER), m_Project(projects) {};
+		J_Developer(std::string name, unsigned int year, unsigned int projects) : Role(name, year, RoleLevel::J_DEVELOPER), m_project(projects) {};
 		~J_Developer() {};
 		void printRole() override;
 	private:
