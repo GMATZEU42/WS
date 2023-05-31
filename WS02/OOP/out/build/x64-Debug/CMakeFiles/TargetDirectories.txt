@@ -1,0 +1,3 @@
+C:/Workspace/exe1/WS/WS02/OOP/out/build/x64-Debug/CMakeFiles/oop.dir
+C:/Workspace/exe1/WS/WS02/OOP/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Workspace/exe1/WS/WS02/OOP/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

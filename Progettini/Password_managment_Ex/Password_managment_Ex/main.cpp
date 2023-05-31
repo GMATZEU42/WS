@@ -11,19 +11,25 @@ int main()
 {	
 	auto console = Console(ConsoleColor::BLUE);
 
-	console.print("Per favore inserire il nome utente \n");
+	int i = 42;
+
+	console.print(i);
+
+	//console.print("Per favore inserire il nome utente \n");
 	
-	std::string nome ;
+	//std::string nome ;
 
-	std::string parola ;
+	//std::string parola ;
 
-	std::cin >> nome;
+	//console.print("Ora inserisci la password del suo account \n");
 
-	console.print("Ora inserisci la password del suo account \n");
+	//std::cin >> parola;
+	
+	//auto ad = admin::Admin();
+	
+	//ad = (nome, parola);
 
-	std::cin >> parola;
-
-	admin::Admin::ImmettiCredenziali(nome, parola);
+	//console.print(ad);
 
 	return 0;
 		

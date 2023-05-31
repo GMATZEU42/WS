@@ -1,0 +1,3 @@
+C:/Workspace/exe1/WS/WS02/OOP/nuova_build/CMakeFiles/oop.dir
+C:/Workspace/exe1/WS/WS02/OOP/nuova_build/CMakeFiles/ALL_BUILD.dir
+C:/Workspace/exe1/WS/WS02/OOP/nuova_build/CMakeFiles/ZERO_CHECK.dir
