@@ -20,6 +20,8 @@
 *.vcxproj.user
 *.sbr
 *.bsc
+*.db
+
 
 # Precompiled Headers
 *.gch
